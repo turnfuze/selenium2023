@@ -9,8 +9,9 @@ public class WebDriverTests {
     private static WebDriver driver = WebDriverUtils.getDriver();
 
     @Test
-    public void testGerURL(){
+    public void testGerURL() throws InterruptedException {
         driver.get("https://www.jw.org/ru/");
+        driver.wait(1000);
         driver.close();
     }
 }
